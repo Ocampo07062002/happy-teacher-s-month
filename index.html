@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Teacher's Day - Ma'am Mari</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TITLE -->
+    <header>
+        <h1>Happy Teacher's Day, Ma'am Mari!</h1>
+        <p>A simple tribute to our wonderful professor</p>
+    </header>
+
+    <!-- POLAROID PHOTOS -->
+    <div class="photo-grid">
+        <div class="polaroid">
+            <img src="pic1.jpg" alt="">
+            <div class="caption">Thank You, Ma'am!</div>
+        </div>
+
+        <div class="polaroid">
+            <img src="pic2.jpg" alt="">
+            <div class="caption">For Your Guidance</div>
+        </div>
+
+        <div class="polaroid">
+            <img src="pic3.jpg" alt="">
+            <div class="caption">We Appreciate You!</div>
+        </div>
+    </div>
+
+    <!-- CLICK TO READ BUTTON -->
+    <div class="message-button-container">
+        <button class="message-button" onclick="openMessage()">
+            CLICK ME TO READ THE MESSAGE
+        </button>
+    </div>
+
+    <!-- HIDDEN LETTER -->
+    <section class="letter" id="letter">
+        <h2>A Letter for Ma'am Mari</h2>
+
+        <p>Happy Teacher’s Day, Ma’am Mari!</p>
+
+        <p>
+            I just want to say thank you for all the patience, effort, and time you give to us as your student. I really appreciate the way you teach us and explain things, especially when the lessons are difficult to understand.
+        </p>
+
+        <p>
+            Thank you for always encouraging us to do our best and for being understanding whenever we make mistakes. I’m truly grateful to have you as my professor.
+        </p>
+
+        <p>
+            Thank you for sharing your knowledge with us and for always doing your best to help us learn.
+        </p>
+
+        <div class="signature">
+            With gratitude and appreciation,<br>
+            Your Student
+        </div>
+    </section>
+
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function openMessage() {
+            const letter = document.getElementById("letter");
+            const button = document.querySelector(".message-button");
+
+            /* Show the letter */
+            letter.style.display = "block";
+
+            /* Change button text */
+            button.innerHTML = "MESSAGE OPENED";
+
+            /* Disable button */
+            button.disabled = true;
+
+            /* Scroll down to the letter */
+            setTimeout(function() {
+                letter.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }, 100);
+        }
+    </script>
+
+</body>
+</html>
